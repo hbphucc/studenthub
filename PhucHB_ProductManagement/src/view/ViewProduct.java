@@ -19,10 +19,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Product;
 
-/**
- *
- * @author ADMIN
- */
 class ViewProduct {
 
     Manage manage = new Manage();
@@ -203,3 +199,4 @@ class ViewProduct {
 
 
 }
+
