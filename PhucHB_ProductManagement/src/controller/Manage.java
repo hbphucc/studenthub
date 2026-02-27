@@ -27,10 +27,7 @@ public class Manage {
 
     public Manage() {
         productList = new ArrayList<>();
-        // Thêm một số sản phẩm mẫu vào danh sách productList
-//        productList.add(new Product("P1", "Product 1", 10.0, 100, 1));
-//        productList.add(new Product("P2", "Product 2", 15.0, 150, 2));
-//        productList.add(new Product("P3", "Product 3", 20.0, 200, 1));
+
     }
 
     public void addProduct(Product product) {
@@ -39,10 +36,8 @@ public class Manage {
 
     public ArrayList<Product> findProductsByName(String searchName) {
         ArrayList<Product> foundProducts = new ArrayList<>();
-        // Lặp qua danh sách sản phẩm hiện có và kiểm tra tên sản phẩm
         for (Product product : productList) {
             if (product.getProductName().toUpperCase().contains(searchName.toUpperCase())) {
-                // Nếu tên sản phẩm chứa chuỗi tìm kiếm, thêm sản phẩm này vào danh sách kết quả
                 foundProducts.add(product);
             }
         }
@@ -56,7 +51,6 @@ public class Manage {
             fileWriter = new FileWriter(Constant.FILE_NAME);
             bufferedWriter = new BufferedWriter(fileWriter);
 
-            //ghi tung thong tin cua tung product vao ben trong file
             for (Product product : productList) {
                 bufferedWriter.write(product.toString());
                 bufferedWriter.newLine();
@@ -107,7 +101,6 @@ public class Manage {
         Collections.sort(list, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
-                //sort theo quantity ( descending)
                 int result = o2.getQuantity() - o1.getQuantity();
                 if (result == 0) {
                     result = Double.compare(o1.getQuantity(), o2.getQuantity());
@@ -140,3 +133,4 @@ public class Manage {
     }
 
 }
+
