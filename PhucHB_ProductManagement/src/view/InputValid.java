@@ -14,11 +14,10 @@ import java.util.Scanner;
  */
 public class InputValid {
 
-    // access modifier + (static) +return type + name method
+
     public static int getInteger(String message, String error, int min, int max) {
         Scanner scanner = new Scanner(System.in);
 
-        //- Yêu cầu người dùng nhập vào một số nguyên
         while (true) {
             try {
                 System.out.print(message);
@@ -27,7 +26,7 @@ public class InputValid {
                     System.err.println("KhÔng được để trống");
                 } else {
                     int number = Integer.parseInt(input);
-                    //check number in range
+
                     if (number >= min && number <= max) {
                         return number;
                     } else {
@@ -43,7 +42,6 @@ public class InputValid {
     public static double getDouble(String message, String error, double min, double max) {
         Scanner scanner = new Scanner(System.in);
 
-        //- Yêu cầu người dùng nhập vào một số nguyên
         while (true) {
             try {
                 System.out.print(message);
@@ -68,7 +66,6 @@ public class InputValid {
     public static float getFloat(String message, String error, float min, float max) {
         Scanner scanner = new Scanner(System.in);
 
-        //- Yêu cầu người dùng nhập vào một số nguyên
         while (true) {
             try {
                 System.out.print(message);
@@ -77,7 +74,6 @@ public class InputValid {
                     System.err.println("KhÔng được để trống");
                 } else {
                     float number = Float.parseFloat(input);
-                    //check number in range
                     if (number >= min && number <= max) {
                         return number;
                     } else {
@@ -94,15 +90,11 @@ public class InputValid {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.print(message);
-            //nhap vao
             String input = scanner.nextLine().trim();
-            //kiem tra xem input co rong hay khong
-            //kiem tra xem input co matches regex hay ko
-            //neu nhu matches voi regex => return string
+
             if (input.matches(regex)) {
                 return input;
             } else {
-                //tell error
                 System.out.println(error);
             }
         }
@@ -138,5 +130,6 @@ public class InputValid {
                 Constant.STATUS_NOT_AVAILABLE);
         return status;
     }
+
 
 }
