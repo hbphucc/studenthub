@@ -10,3 +10,9 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?logo=microsoftsqlserver&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+
+
+![License](https://img.shields.io/github/license/hbphucc/SEAL.NET)
+![Repo Size](https://img.shields.io/github/repo-size/hbphucc/SEAL.NET)
+![Last Commit](https://img.shields.io/github/last-commit/hbphucc/SEAL.NET)
+![Issues](https://img.shields.io/github/issues/hbphucc/SEAL.NET)
